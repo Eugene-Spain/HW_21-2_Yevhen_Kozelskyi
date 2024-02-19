@@ -53,10 +53,12 @@ if (requestPriceCorrect) {
         if (+requestQuantity >= 3) {
             requestDiscountCode += QUANTITY_DISCOUNT
             alert(`Congratulations! You have got additional ${quantityDiscountShow} % discount for this items quantity`)
+        } else if (+requestQuantity === 0){
+            alert(`Sorry but "${requestQuantity}" that you provided as items quantity is unacceptable. Check it one more time and try again.`)
         }
     }
     else{
-        alert(`Sorry but "${requestQuantity}" that you provided as items quantity is not a number or incorrect. Check one more time and try again.`)
+        alert(`Sorry but "${requestQuantity}" that you provided as items quantity is not a number or incorrect. Check it one more time and try again.`)
     }
 
 } else {
